@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: payetonkaya
+      MYSQL_USER: teamsKaya
+      MYSQL_PASSWORD: Azertyuiop*
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3306:3306
